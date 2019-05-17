@@ -1,12 +1,16 @@
-${域类}
-${标签标题}
-${out}
-
 \$(function(){
     console.info(document.title + "加载了...")
 
     load${域类}CurrentPage("${标签标题}");
+    getCurrentTab();
+
 })
+
+function getCurrentTab() {
+    var currentTab = \$("nav-link active")
+    console.info(currentTab);
+    console.info("当前：" + currentTab);
+}
 
 function getCurrentPage(title) {
     var currentPageName = "showCurrentPage${域类}" + title
@@ -39,8 +43,7 @@ function load${域类}PreviousPage(title) {
 }
 
 function load${域类}NextPage(title, currentPage) {
-    var currentPageName = "currentPage${域类}" + title
-    var currentPage = \$("#currentPage${域类}" + title)
+    var currentPage = getCurrentPage(title)
     if (currentPage) {
         currentPage = currentPage + 1;
     } else {
