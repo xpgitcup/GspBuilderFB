@@ -23,11 +23,18 @@
             <li class="page-item" >
                 <a class="page-link" id="showCurrentPage${域类}${标签标题}"></a>
             </li>
+            <li class="page-item" >
+                <a class="page-link">/</a>
+            </li>
+            <li class="page-item" >
+                <a class="page-link" id="showTotalPage${域类}${标签标题}"></a>
+            </li>
             <li>
                 <a class="page-link" href="javascript: load${域类}NextPage('${标签标题}')">&raquo</a>
             </li>
         </ul>
     </div>
+    <!--具体的${标签标题}标签结束======-->
 
 </div>
 

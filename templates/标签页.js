@@ -1,33 +1,43 @@
 \$(function(){
     console.info(document.title + "加载了...")
-
-    load${域类}CurrentPage("${标签标题}");
-    getCurrentTab();
-
+    setupTabs${域类}();
 })
 
-function getCurrentTab() {
-    var currentTab = \$("nav-link active")
-    console.info(currentTab);
-    console.info("当前：" + currentTab);
+function setupTabs${域类}() {
+    // 首先获取各个标签
+    var tabs = \$("a.nav-link");
+    tabs.each(function (e) {
+        var tab = tabs[e]
+        //tab.click(loadTabData(tab.innerText))
+        tab.on("click", loadTabData(tab.innerText))
+    })
+
+    // 数据加载函数
+    function loadTabData(title) {
+        load${域类}CurrentPage(title)
+    }
+}
+
+function showCurrentPageNumber(title, currentPageNumber) {
+    var currentPageName = "showCurrentPage${域类}" + title
+    \$("#" + currentPageName).html(currentPageNumber)
+    \$("#currentPage${域类}" + title).html(currentPageNumber)
 }
 
 function getCurrentPage(title) {
-    var currentPageName = "showCurrentPage${域类}" + title
     var currentPage = \$("#currentPage${域类}" + title)
-    console.info("当前页数据?" + currentPage[0] + " " + currentPage[1]);
     var currentPageNumber
-    if (currentPage[0] != undefined) {
-        currentPageNumber = currentPage.text()
+    if (currentPage != undefined) {
+        currentPageNumber = parseInt(currentPage.text())
     } else {
         currentPageNumber = 1;
     }
-    \$("#"+currentPageName).html(currentPageNumber)
     return currentPageNumber
 }
 
 function load${域类}CurrentPage(title) {
     var currentPage = getCurrentPage(title)
+    showCurrentPageNumber(title, currentPage);
     loadData${域类}(title, currentPage);
 }
 
@@ -36,9 +46,8 @@ function load${域类}PreviousPage(title) {
     currentPage = currentPage - 1;
     if (currentPage < 1) {
         currentPage = 1;
-    } else {
-        currentPage = 1;
     }
+    showCurrentPageNumber(title, currentPage);
     loadData${域类}(title, currentPage);
 }
 
@@ -49,10 +58,17 @@ function load${域类}NextPage(title, currentPage) {
     } else {
         currentPage = 1;
     }
+    showCurrentPageNumber(title, currentPage);
     loadData${域类}(title, currentPage);
 }
 
 function loadData${域类}(title, currentPage) {
     var url = "${propertyName}/list?key=" + title + "&currentPage${域类}" + title + "=" + currentPage;
     ajaxRun(url, 0, "display" + title + "Div");
+}
+
+function countData${域类}(title) {
+    var url = "${propertyName}/count?key=" + title;
+    var total = ajaxCalculate(url);
+
 }
