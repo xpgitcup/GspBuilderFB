@@ -2,8 +2,12 @@ package frame
 
 import groovy.swing.SwingBuilder
 
+import javax.swing.ButtonGroup
+import javax.swing.JButton
 import javax.swing.JFrame
+import javax.swing.JLabel
 import javax.swing.JTabbedPane
+import javax.swing.JTextField
 import javax.swing.UIManager
 import java.awt.BorderLayout
 import java.awt.GridLayout
@@ -29,28 +33,43 @@ class CommonFrame {
     def commonAction(ActionEvent evt) {
         def actionName = evt.actionCommand
 
-        //println("通用事件处理：${actionName} -- ${evt}")
-        //println("事件来源：${evt.source.name}")
+        println("通用事件处理：${actionName} -- ${evt}")
+        println("事件来源：${evt.source.name}")
 
-        def ps = document.toolBarElement.get(evt.source.name)
+        //def ps = document.toolBarElement.get(evt.source.name)
+        //println("${ps}")
         def params = [:]
-        println("${ps}")
         def pps = [:]
-        ps.each { e->
+        /*
+        ps.each { e ->
             def text = swing."${e}".text
             println("输入数据${e}：${text}")
             pps.put(e, text)
         }
         println("${pps}")
+         */
+        inputToolBar.getComponents().each { e->
+            println("${e.class}")
+            def item = e.class
+            if ("${item}".contains("JTextField")) {
+                println("输入${e.name} ${e.text}")
+                //pps.put("${e.name}", "${e.text}")
+                pps.put(e.name, e.text)
+            }
+        }
         params.put(evt.source.name, pps)
+        println("${params}")
         gspSource.text = document.createGsp(params)
         jsPanel.text = document.createJsText(params)
         //controllerPanel.text = document.createController(params)
     }
 
     def document
+    def group
+    def inputToolBar
 
     def theToolBar = {
+        /*
         swing.panel(layout: new GridLayout(document.toolBarElement.size(), 1), constraints: BorderLayout.NORTH) {
             document.toolBarElement.each { e ->
                 toolBar() {
@@ -64,6 +83,30 @@ class CommonFrame {
                 }
             }
         }
+         */
+        swing.panel(layout: new GridLayout(2, 1), constraints: BorderLayout.NORTH) {
+            toolBar() {
+                group = new ButtonGroup()
+                document.toolBarElement.each { e ->
+                    group.add(radioButton(text: e.key, actionPerformed: { evt -> createInputText(evt.source.name) }, name: e.key))
+                }
+            }
+            inputToolBar = toolBar() {}
+        }
+    }
+
+    def createInputText(key) {
+        def fields = document.toolBarElement.get(key)
+        println("${fields}")
+        inputToolBar.removeAll()
+        inputToolBar.add(new JLabel(text: key))
+        inputToolBar.add(new JLabel(text: "："))
+        fields.each { e ->
+            inputToolBar.add(new JLabel(text: e))
+            inputToolBar.add(new JTextField(name: e))
+        }
+        inputToolBar.add(new JButton(text: "生成", actionPerformed: { evt -> commonAction(evt) }, name: key))
+        inputToolBar.updateUI()
     }
 
     def mainTabs

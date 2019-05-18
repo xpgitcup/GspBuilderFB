@@ -51,6 +51,9 @@ class CommonDocument {
         if (templateFile.exists()) {
             def engine = new SimpleTemplateEngine()
             def template = engine.createTemplate(templateFile.text)
+            def newParams = params.get(key)
+            def domain = newParams.get("域类")
+            println("domain:${domain}")
             //处理一下
             if (params.get(key).get("域类")) {
                 def className = toUpperCaseFirstOne(params.get(key).get("域类"))
@@ -58,7 +61,8 @@ class CommonDocument {
                 params.get(key).className = className
                 params.get(key).propertyName = propertyName
             }
-            jsText = template.make(params.get(key))
+            println("最终的：${newParams}")
+            jsText = template.make(newParams)
         } else {
             def printWriter = new PrintWriter(templateFile, "utf-8")
             params.get(key).each { e ->
