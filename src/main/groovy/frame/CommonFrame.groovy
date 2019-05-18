@@ -45,7 +45,7 @@ class CommonFrame {
         params.put(evt.source.name, pps)
         gspSource.text = document.createGsp(params)
         jsPanel.text = document.createJsText(params)
-        controllerPanel.text = document.createController(params)
+        //controllerPanel.text = document.createController(params)
     }
 
     def document

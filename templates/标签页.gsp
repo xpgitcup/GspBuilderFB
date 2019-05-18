@@ -16,18 +16,24 @@
             <br> 在这里显示${标签标题}所需的信息</br>
         </div>
         <!-- 这里是分页设置-->
-        <ul class="pagination">
+        <ul class="pagination pagination-sm">
+            <li class="page-item">
+                <a class="page-link">页长</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" id="pageSize${域类}${标签标题}"></a>
+            </li>
             <li class="page-item">
                 <a class="page-link" href="javascript: load${域类}PreviousPage('${标签标题}')">&laquo</a>
             </li>
             <li class="page-item" >
-                <a class="page-link" id="showCurrentPage${域类}${标签标题}"></a>
+                <a class="page-link" id="currentPage${域类}${标签标题}"></a>
             </li>
             <li class="page-item" >
                 <a class="page-link">/</a>
             </li>
             <li class="page-item" >
-                <a class="page-link" id="showTotalPage${域类}${标签标题}"></a>
+                <a class="page-link" id="totalPage${域类}${标签标题}"></a>
             </li>
             <li>
                 <a class="page-link" href="javascript: load${域类}NextPage('${标签标题}')">&raquo</a>
