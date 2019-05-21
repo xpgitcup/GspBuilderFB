@@ -52,17 +52,8 @@ class CommonDocument {
             def engine = new SimpleTemplateEngine()
             def template = engine.createTemplate(templateFile.text)
             def newParams = params.get(key)
-            def domain = newParams.get("域类")
-            println("domain:${domain}")
-            //处理一下
-            if (params.get(key).get("域类")) {
-                def className = toUpperCaseFirstOne(params.get(key).get("域类"))
-                def propertyName = toLowerCaseFirstOne(params.get(key).get("域类"))
-                params.get(key).className = className
-                params.get(key).propertyName = propertyName
-            }
-            println("最终的：${newParams}")
-            jsText = template.make(newParams)
+            def nParams = processParams(newParams)
+            jsText = template.make(nParams)
         } else {
             def printWriter = new PrintWriter(templateFile, "utf-8")
             params.get(key).each { e ->
@@ -71,6 +62,34 @@ class CommonDocument {
             printWriter.close()
         }
         jsText
+    }
+
+    /*
+    处理多个元素的情况
+    * */
+
+    def processParams(params) {
+        params.each { e ->
+            if (e.key.contains("-")) {
+                println("多元素处理：")
+                def mkey = e.key.split("-")
+                println("${mkey}")
+                def pkey = mkey[0]
+                def n = Integer.parseInt(mkey[1])
+                for (int i=1; i<=n; i++) {
+                    def ekey = "${pkey}-${i}"
+                    def pkeyText = createElementText(ekey)
+                    params.put(ekey, pkeyText)
+                }
+            }
+        }
+    }
+
+    /*
+    创建元素文本
+    * */
+    def createElementText(ekey) {
+        def file = new File("")
     }
 
     /*

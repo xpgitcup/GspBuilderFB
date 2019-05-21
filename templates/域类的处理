@@ -1,0 +1,10 @@
+            def domain = newParams.get("域类")
+            println("domain:${domain}")
+            //处理一下
+            if (params.get(key).get("域类")) {
+                def className = toUpperCaseFirstOne(params.get(key).get("域类"))
+                def propertyName = toLowerCaseFirstOne(params.get(key).get("域类"))
+                params.get(key).className = className
+                params.get(key).propertyName = propertyName
+            }
+            println("最终的：${newParams}")
