@@ -28,68 +28,77 @@ class CommonDocument {
 
     def createGsp(params) {
         def key = params.keySet()[0]
+        def templateParams = params.get(key)
         println("第一个关键字：${key}")
-
+        def realParams = processParams4tabs(templateParams)
         def templateFileName = "templates/${key}.gsp"
-        Writable gspText = createText(templateFileName, params, key)
+        def gspText = createText(templateFileName, realParams)
         return gspText
     }
 
     def createJsText(params) {
         println("传入参数：${params}")
         def key = params.keySet()[0]
+        def templateParams = params.get(key)
         println("第一个关键字：${key}")
 
         def templateFileName = "templates/${key}.js"
-        Writable jsText = createText(templateFileName, params, key)
+        def jsText = createText(templateFileName, templateParams)
         return jsText
     }
 
-    private Writable createText(templateFileName, params, key) {
+    private createText(templateFileName, params) {
         def templateFile = new File(templateFileName)
         def jsText = "请编辑模板文件：${templateFileName}."
         if (templateFile.exists()) {
             def engine = new SimpleTemplateEngine()
             def template = engine.createTemplate(templateFile.text)
-            def newParams = params.get(key)
-            def nParams = processParams(newParams)
-            jsText = template.make(nParams)
+            jsText = template.make(params)
         } else {
             def printWriter = new PrintWriter(templateFile, "utf-8")
-            params.get(key).each { e ->
+            params.each { e ->
                 printWriter.println("\${${e.key}}")
             }
             printWriter.close()
         }
-        jsText
+        return jsText
     }
 
     /*
     处理多个元素的情况
     * */
 
-    def processParams(params) {
+    def processParams4tabs(params) {
+        println("输入：${params}")
         params.each { e ->
-            if (e.key.contains("-")) {
-                println("多元素处理：")
-                def mkey = e.key.split("-")
-                println("${mkey}")
-                def pkey = mkey[0]
-                def n = Integer.parseInt(mkey[1])
-                for (int i=1; i<=n; i++) {
-                    def ekey = "${pkey}-${i}"
-                    def pkeyText = createElementText(ekey)
-                    params.put(ekey, pkeyText)
+            if (e.key.contains("tabNames")) {
+                def estr = e.value.split(",")
+                def eitems = []
+                estr.each { ee ->
+                    def eitem = [:]
+                    eitem.put("标签标题", ee)
+                    println("${eitem}")
+                    eitems.add(eitem)
                 }
+                params.remove(e.key)
+                def subParams = params
+                // 分别计算head&body的字符串
+                def headText = ""
+                def bodyText = ""
+                eitems.each { ee ->
+                    subParams.putAll(ee)
+                    println("单元模型：${subParams}")
+                    headText += createText("templates/tabsHead.gsp", subParams)
+                    bodyText += createText("templates/tabsBody.gsp", subParams)
+                }
+                println("头：${headText}")
+                println("主体：${bodyText}")
+                params.put("tabsHead", headText)
+                params.put("tabsBody", bodyText)
             }
         }
-    }
-
-    /*
-    创建元素文本
-    * */
-    def createElementText(ekey) {
-        def file = new File("")
+        println("变换后：${params}")
+        return params
     }
 
     /*

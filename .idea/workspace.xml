@@ -7,11 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3e4a634-808a-49bf-9d68-6068bd21822e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GspBuilderFB_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/单页.gsp" beforeDir="false" afterPath="$PROJECT_DIR$/templates/单页.gsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/GspBuilderFB_jar/GspBuilderFB.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/GspBuilderFB_jar/GspBuilderFB.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/标签标题(逗号分隔)-1.gsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/标签标题(逗号分隔)-2.gsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/标签页-控制器M.gsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/标签页-控制器M.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -37,44 +40,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/单页Panel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2413">
-              <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+            <state relative-caret-position="95">
+              <caret line="5" selection-start-line="4" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/单页Panel.gsp">
+        <entry file="file://F:/LiXiaopingData/归档/21工具/GspBuilderFB/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/单页.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/frame/CommonFrame.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="233">
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -82,8 +58,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="86">
+              <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/frame/CommonFrame.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/标签页-控制器-Tabs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
             </state>
           </provider>
         </entry>
@@ -105,17 +99,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy" />
         <option value="$PROJECT_DIR$/templates/标签页.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/frame/CommonFrame.groovy" />
         <option value="$PROJECT_DIR$/templates/标签页.gsp" />
         <option value="$PROJECT_DIR$/templates/标签页.js" />
         <option value="$PROJECT_DIR$/templates/单页.gsp" />
-        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/templates/标签页-控制器.gsp" />
         <option value="$PROJECT_DIR$/templates/标签页-控制器.js" />
         <option value="$PROJECT_DIR$/templates/单页Panel.js" />
         <option value="$PROJECT_DIR$/templates/单页Panel.gsp" />
+        <option value="$PROJECT_DIR$/templates/标签页-控制器M.gsp" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/templates/标签页-控制器-Tabs.gsp" />
+        <option value="$PROJECT_DIR$/templates/tabsHead.gsp" />
+        <option value="$PROJECT_DIR$/templates/tabsBody.gsp" />
+        <option value="$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy" />
+        <option value="$PROJECT_DIR$/templates/标签页-控制器-Tabs.js" />
+        <option value="F:/LiXiaopingData/归档/21工具/GspBuilderFB/config.json" />
       </list>
     </option>
   </component>
@@ -130,7 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,14 +226,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/GspBuilderFB_jar" />
+    <property name="last_opened_file_path" value="F:/LiXiaopingData/归档/21工具/GspBuilderFB/config.json" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -297,18 +297,20 @@
       <workItem from="1558252306783" duration="54000" />
       <workItem from="1558252618639" duration="400000" />
       <workItem from="1558253617862" duration="11000" />
+      <workItem from="1558486146435" duration="1619000" />
+      <workItem from="1558509606936" duration="5130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46200000" />
+    <option name="totallyTimeSpent" value="52949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5075107" visible="true" weight="0.25586355" />
-      <window_info id="Structure" order="1" sideWeight="0.49248928" side_tool="true" visible="true" weight="0.25586355" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6491416" visible="true" weight="0.26119402" />
+      <window_info id="Structure" order="1" sideWeight="0.35085836" side_tool="true" visible="true" weight="0.26119402" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -316,8 +318,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22639485" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20064378" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37017167" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -338,6 +340,7 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,12 +351,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy</url>
-          <line>65</line>
+          <line>50</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GspBuilderFB$Main.ic" NAME="Main Coverage Results" MODIFIED="1558486317865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>main.*</FILTER>
+    </SUITE>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -401,30 +415,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器.gsp">
+    <entry file="file://$PROJECT_DIR$/templates/单页Panel.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2163">
-          <caret line="18" column="59" lean-forward="true" selection-end-line="161" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="209">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/单页Panel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2413">
+        <state relative-caret-position="841">
           <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
         </state>
       </provider>
@@ -436,24 +436,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/frame/CommonFrame.groovy">
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器M.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="133">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器-对象.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器-对象.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="70" column="4" lean-forward="true" selection-end-line="161" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器-Tabs.gsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tabsHead.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="43" selection-start-line="11" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tabsBody.gsp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/document/CommonDocument.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="86">
+          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/单页Panel.gsp">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/frame/CommonFrame.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="149">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/标签页-控制器-Tabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/LiXiaopingData/归档/21工具/GspBuilderFB/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
         </state>
       </provider>
     </entry>
