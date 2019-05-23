@@ -1,0 +1,5 @@
+<div class="" title="数据交换">
+    <g:each in="${cn.edu.cup.system.SystemStatus.findBySessionId(session.id)?.statusParameters}" var="item">
+        <div id="${item.statusKey}">${item.statusValue}</div>
+    </g:each>
+</div>

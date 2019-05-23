@@ -109,6 +109,26 @@ function getPageSize(title) {
 }
 
 /*
+* 加载尾页数据
+* */
+function load${域类}LastPage(title) {
+    var currentPage = 1;//getCurrentPage(title)
+    var totalPageName = "totalPage${域类}" + title;
+    currentPage = parseInt(\$("#" + totalPageName).html())
+    showCurrentPageNumber(title, currentPage);
+    loadData${域类}(title, currentPage);
+}
+
+/*
+* 加载首页数据
+* */
+function load${域类}FirstPage(title) {
+    var currentPage = 1;//getCurrentPage(title)
+    showCurrentPageNumber(title, currentPage);
+    loadData${域类}(title, currentPage);
+}
+
+/*
 * 加载当前页数据
 * */
 function load${域类}CurrentPage(title) {

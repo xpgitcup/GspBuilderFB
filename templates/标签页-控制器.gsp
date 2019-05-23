@@ -24,6 +24,9 @@
                 <a class="page-link" id="pageSize${域类}${标签标题}"></a>
             </li>
             <li class="page-item">
+                <a class="page-link" href="javascript: load${域类}FirstPage('${标签标题}')">首页</a>
+            </li>
+            <li class="page-item">
                 <a class="page-link" href="javascript: load${域类}PreviousPage('${标签标题}')">&laquo</a>
             </li>
             <li class="page-item" >
@@ -37,6 +40,9 @@
             </li>
             <li>
                 <a class="page-link" href="javascript: load${域类}NextPage('${标签标题}')">&raquo</a>
+            </li>
+            <li>
+                <a class="page-link" href="javascript: load${域类}LastPage('${标签标题}')">尾页</a>
             </li>
         </ul>
     </div>

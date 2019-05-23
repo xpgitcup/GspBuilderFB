@@ -28,7 +28,7 @@ function setupPagination${域类} () {
     }
     \$("#" + pageSizeName).html(pageSize);
     // 总页数
-    var total = countData${域类}(title${域类});
+    var total = countData${域类}();
     var totalPageName = "totalPage${域类}" + title${域类};
     var totalPage =  Math.ceil(total/pageSize)
     \$("#" + totalPageName).html(totalPage)
@@ -77,10 +77,29 @@ function getPageSize() {
 }
 
 /*
+* 加载末页数据
+* */
+function load${域类}LastPage() {
+    var totalPageName = "totalPage${域类}" + title${域类};
+    var currentPage = parseInt(\$("#" + totalPageName).html())
+    showCurrentPageNumber(currentPage);
+    loadData${域类}(currentPage);
+}
+
+/*
+* 加载首页数据
+* */
+function load${域类}FirstPage() {
+    var currentPage = 1
+    showCurrentPageNumber(currentPage);
+    loadData${域类}(currentPage);
+}
+
+/*
 * 加载当前页数据
 * */
 function load${域类}CurrentPage() {
-    var currentPage = getCurrentPage(title${域类})
+    var currentPage = getCurrentPage()
     loadData${域类}(currentPage);
 }
 
@@ -88,7 +107,7 @@ function load${域类}CurrentPage() {
 * 向前翻页
 * */
 function load${域类}PreviousPage() {
-    var currentPage = getCurrentPage(title${域类})
+    var currentPage = getCurrentPage()
     currentPage = currentPage - 1;
     if (currentPage < 1) {
         currentPage = 1;
@@ -100,7 +119,7 @@ function load${域类}PreviousPage() {
 /*
 * 向后翻页
 * */
-function load${域类}NextPage(currentPage) {
+function load${域类}NextPage() {
     var currentPage = getCurrentPage()
     var totalPage = getTotalPage()
     currentPage = currentPage + 1;
@@ -120,7 +139,8 @@ function loadData${域类}(currentPage) {
 }
 
 function countData${域类}() {
-    var url = "${propertyName}/count?key=" + title${域类};
+    var append = appendParams()
+    var url = "${控制器}/count?key=" + title${域类} + append;
     var total = ajaxCalculate(url);
     return total;
 }
